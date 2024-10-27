@@ -144,7 +144,10 @@ public class King extends ChessPiece {
 
             }
         }
-        printBoard(attackMap);
+        String isDebug = System.getenv("debug_mode");
+        if (isDebug != null) {
+            printBoard(attackMap);
+        }
         return attackMap[line][column];
     }
 
